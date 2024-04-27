@@ -1,6 +1,4 @@
 # simple-file-synchronization
-<br>
-<br>
 双向文件同步程序
 Simple two-way  file synchronization used to sync file between remote and local.
 
