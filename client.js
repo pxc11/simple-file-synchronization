@@ -10,6 +10,11 @@ client.connect(PORT, HOST, () => {
 
 });
 
+client.on('error', (e) => {
+    console.log(e);
+    process.exit();
+})
 client.on('close', () => {
     console.log('Connection closed');
+    process.exit();
 });

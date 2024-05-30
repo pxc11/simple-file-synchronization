@@ -1,4 +1,5 @@
 const path = require('path');
+const debugMode = 0;
 const serverConfig = {
   PORT: 3000,
   WATCH_PATH: path.join(__dirname, './test/server'),
@@ -25,4 +26,5 @@ const clientConfig = {
 module.exports = {
   serverConfig,
   clientConfig,
+  debugMode,
 };
