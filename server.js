@@ -7,6 +7,7 @@ const {PORT, WATCH_PATH, LISTEN_PATH, OPTIONS, WATCH_INTERVAL_TIME} = require('.
 
 const server = net.createServer((socket) => {
     console.log('Client connected');
+    socket.isServer = true;
     common.listenFileChange(socket, LISTEN_PATH);
     common.watchFileChange(WATCH_PATH, OPTIONS, socket, WATCH_INTERVAL_TIME);
 

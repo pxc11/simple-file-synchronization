@@ -5,6 +5,7 @@ const {PORT, HOST, WATCH_PATH, LISTEN_PATH, OPTIONS, WATCH_INTERVAL_TIME} = requ
 // 连接到服务器
 client.connect(PORT, HOST, () => {
     console.log('Connected to server');
+    client.isServer = false;
     common.listenFileChange(client, LISTEN_PATH);
     common.watchFileChange(WATCH_PATH, OPTIONS, client, WATCH_INTERVAL_TIME);
 
