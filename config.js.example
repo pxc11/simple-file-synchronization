@@ -1,30 +1,29 @@
-const path = require('path');
 const serverConfig = {
-    PORT: 3001,
-    WATCH_PATH: path.join(__dirname, './test/server'),
-    LISTEN_PATH: path.join(__dirname, './test/server'),
+    PORT: 3000,
+    WATCH_PATH: './test',
     OPTIONS: {
-        ignored: [],
+        ignored: [
+            /\.zip$/i,
+            /\.git/,
+        ],
         ignoreInitial: true,
+        ignorePermissionErrors: true,
     },
-    WATCH_INTERVAL_TIME: 2,
 };
 
 const clientConfig = {
-    PORT: 3001,
+    PORT: 3000,
     HOST: '127.0.0.1',
-    WATCH_PATH: path.join(__dirname, './test/client'),
-    LISTEN_PATH: path.join(__dirname, './test/client'),
+    WATCH_PATH: './test2',
     OPTIONS: {
         ignored: [],
         ignoreInitial: true,
+        ignorePermissionErrors: true,
     },
-    WATCH_INTERVAL_TIME: 2,
+    MAX_FILE_CHANNEL_COUNT: 100,
 };
 
 module.exports = {
     serverConfig,
     clientConfig,
 };
-
-
