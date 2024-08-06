@@ -9,6 +9,7 @@ const serverConfig = {
         ignoreInitial: true,
         ignorePermissionErrors: true,
     },
+    WATCH_DEBOUNCE_INTERVAL: 500,
 };
 
 const clientConfig = {
@@ -21,6 +22,7 @@ const clientConfig = {
         ignorePermissionErrors: true,
     },
     MAX_FILE_CHANNEL_COUNT: 100,
+    WATCH_DEBOUNCE_INTERVAL: 500,
 };
 
 module.exports = {
